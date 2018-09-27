@@ -1,21 +1,38 @@
 #앞에서 배웠던 함수들은 pyton3에 내장되어있는 함수였고
 # def를 이용하는 것은 원하는 함수를 직접 만드는 것이다.
-
-#예제1. (*def = definition의 줄임말)
-def sum(a,b): #여기 a,b는 매개변수
-  return a + b
-a = 3
-b = 4
-print(sum(a,b)) # 여기a,b는 인수
-
 # 매개변수는 함수에 입력으로 전달된 값을 받는 변수를 의미하고 
 # 인수는 함수를 호출할 때 전달하는 입력값을 의미한다.
 
+#ex1) 일반적인 함수
+def sum(a,b): 
+  result = a + b
+  return result
+#사용법 - 결과값을 받을 변수 = 함수명(입력 인수 1,입력 인수2,...)
+a = sum(3,4) 
+print(a) 
 
-def make_a_sound():   #매개변수 x인 함수정의 def=definition의 줄임말
-  print('quack')
-make_a_sound()
+#ex2)입력값이 없는 함수
+def say():
+  return 'Hi'
+#사용법 - 결과값을 받을 변수 = 함수명()
+a = say()
+print(a)
 
-def echo(something): #something이라는 변수를 입력받는 함수정의
-  return something + '' + something
-echo('abcdefg')
+#ex3) 결과값이 없는 함수
+def sum(a,b):
+  print("%d, %d의 합은 %d 입니다." % (a, b, a+b))
+#사용법 - 함수명(입력 인수1, 입력인수2, ...)
+sum(3,4)
+
+# ex3)에서 결과값이 진짜 없는지 확인하는 예
+a = sum(3,4)
+print(a)
+
+#ex4) 입력값과 결과값 모두 없는 함수
+def say():
+  print('Hi')
+#사용법 - 함수명()
+say()
+
+  #요약하자면 입력값이 있는 함수는 매개변수에 무언가 존재할때를 뜻하고
+  #결과값이 있는 함수는 return이 존재하는 함수를 뜻합니다.
