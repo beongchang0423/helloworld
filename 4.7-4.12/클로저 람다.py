@@ -1,4 +1,11 @@
 #클로져
+def outer_print(msg):
+  def inner_print():
+    print('hello %s'%msg)
+  return inner_print
+printer = outer_print('Hi')
+printer()
+
 #익명함수 : lambda()
 def edit_story(words,func):
   for word in words:
